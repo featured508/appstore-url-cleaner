@@ -1,8 +1,9 @@
 from re import match as rem
+from typing import Optional
 
 PATTERN = r'https://apps\.apple\.com(?:/[a-z]{2})?/app(?:/[^/]+)?/(id\d+)'
 
-def clean_url(url: str) -> str | None:
+def clean_url(url: str) -> Optional[str]:
     url = url.strip()
 
     if 'apple' not in url.lower():
